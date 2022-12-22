@@ -1,0 +1,555 @@
+@import 'core/variables';
+@import 'core/theme-colors';
+
+:root {
+  --chat-search-bg: #fdfdfd;
+  --kanban-scrollbar-track: #{lighten($sidebar-scrollbar-thumb-color, 55%)};
+  --kanban-scrollbar-thumb: #{lighten($sidebar-scrollbar-thumb-color, 45%)};
+}
+
+[theme='dark'] {
+  --chat-search-bg: #{$sidebar-dark-bg};
+  --kanban-scrollbar-track: #{lighten($sidebar-scrollbar-thumb-color, 10%)};
+  --kanban-scrollbar-thumb: #{darken($sidebar-scrollbar-thumb-color, 5%)};
+}
+
+// Sample page calendar view
+.calendar-view .fc-timeGrid-view {
+  .fc-event {
+    margin-right: .5rem;
+  }
+}
+
+.calendar-view .fc-timegrid .fc-timegrid-slot {
+  height: 150px !important;
+}
+
+.custom-modal {
+  background: var(--default-card-bg) !important;
+  position: absolute;
+  border-radius: 5px;
+  width: 510px;
+  padding: 2rem;
+  top: 50%;
+  left: 50%;
+  z-index: 1200;
+  font-size: 12px;
+  transition-duration: 300ms;
+}
+
+// Grid/List view
+.employee-preview-card {
+  .dropdown {
+    &.options-dropdown {
+      right: $default-card-padding;
+
+      .btn-option {
+        width: 35px;
+        height: 15px;
+        border-radius: 0.5rem;
+        background-color: var(--icon-hover-bg);
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}
+
+// Social link
+.icon-box {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: var(--base-color);
+
+  svg {
+    width: 22px;
+    height: 22px;
+    color: $brand-color;
+  }
+
+  i {
+    font-size: 22px;
+    color: $brand-color;
+  }
+}
+
+// Step input selector
+.step-input-selector {
+  .step-input {
+    width: 100%;
+    height: 40px;
+    background-color: var(--base-color);
+
+    &:hover {
+      color: $white;
+      background-color: $brand-color;
+    }
+
+    &.selected {
+      color: $white;
+      background-color: $brand-color;
+    }
+
+    &:first-child {
+      border-radius: $default-radius 0 0 $default-radius;
+    }
+
+    &:last-child {
+      border-radius: 0 $default-radius $default-radius 0;
+    }
+  }
+}
+
+// Tags add-edit component
+.tags-organizer {
+  .btn-remove-tag {
+    width: 13px;
+    height: 13px;
+    color: #313131;
+    margin-left: 15px;
+    font-size: inherit;
+    border-radius: 50%;
+    background-color: #f7f7f747;
+    cursor: pointer;;
+  }
+}
+
+// Kanban view design
+.kanban-wrapper {
+  display: flex;
+  padding: 0 0.5rem 0.5rem 0;
+
+  &.custom-scrollbar {
+    &::-webkit-scrollbar {
+      height: 7px !important;
+    }
+  }
+
+  .kanban-column {
+    width: 300px;
+    min-width: 300px;
+    background-color: var(--base-color);
+    margin-right: .5rem;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    .kanban-draggable-column {
+      overflow-y: auto;
+      height: 600px;
+      //max-height: 600px;
+      //min-height: 300px;
+      padding: 0 5px;
+
+      .draggable-item {
+        cursor: move;
+
+        .card-body {
+          padding: 1rem !important;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        width: $default-scrollbar-width;
+        height: $default-scrollbar-width;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: var(--kanban-scrollbar-track);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: var(--kanban-scrollbar-thumb);
+      }
+    }
+
+    .draggable-action-wrapper {
+      padding: 5px;
+    }
+  }
+
+  .sortable-ghost {
+    opacity: 0.1 !important;
+  }
+
+  //.sortable-chosen {
+  //    opacity: 0.1;
+  //    background-color: lighten($brand-color, 10%) !important;
+  //}
+
+  .stage-header {
+    border-bottom: .5rem solid var(--default-card-bg);
+
+    .stage-information {
+      span {
+        display: flex;
+        font-size: 90%;
+        align-items: center;
+        margin-right: 12px;
+
+        &:before {
+          content: '';
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          margin-right: 4px;
+          display: inline-block;
+          background-color: $text-muted;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .btn-stage-action {
+    width: 100%;
+    font-size: 90%;
+    display: flex;
+    color: $text-muted;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 1.2rem;
+    background-color: var(--default-card-bg);
+    transition: color $default-transition-duration $action-transition-timing-function,
+    background-color $default-transition-duration $action-transition-timing-function;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      stroke-width: 1.5;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $brand-color;
+    }
+  }
+}
+
+.add-new-stage {
+  padding: 0 0 .5rem 0;
+
+  .wrapper {
+    width: 250px;
+    min-width: 250px;
+    background-color: var(--base-color);
+  }
+}
+
+// Form - inputs
+.default-file {
+  .text-muted {
+    display: block;
+    margin-top: 8px;
+  }
+}
+
+// Chat
+$chat-box-height: calc(100vh - #{$navbar-height} - #{$default-padding-margin} - #{$default-padding-margin} - #{$default-padding-margin} - 110px);
+
+@mixin chat-scrollbar-mixin {
+  &::-webkit-scrollbar {
+    width: $sidebar-scrollbar-width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: $default-radius;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background: $sidebar-scrollbar-thumb-color;
+    }
+  }
+}
+
+@mixin emoji-dropdown-mixin {
+  .dropdown-menu {
+    border: 0;
+    padding: 0.5rem;
+    box-shadow: var(--default-box-shadow);
+    background-color: var(--dropdown-menu-bg);
+
+    .emoji {
+      width: 25px;
+      height: 25px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: $default-radius;
+      transition: $default-transition-duration;
+
+      &:hover {
+        background-color: var(--base-color);
+      }
+    }
+  }
+}
+
+.chat-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-radius: $default-radius;
+  box-shadow: var(--default-box-shadow);
+  background-color: var(--default-card-bg);
+
+  .chat-avatar {
+    img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+
+    .chat-avatar-empty {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      color: var(--avatar-no-image-font);
+      background-color: var(--avatar-no-image-bg);
+    }
+  }
+
+  .chat-avatar-group {
+    display: inline-flex;
+    align-items: center;
+
+    .chat-avatar {
+      margin-left: -20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .chat-contacts {
+    width: 300px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--default-border-color);
+
+    .search-contact {
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 $default-padding-margin;
+      border-radius: $default-radius 0 0 0;
+      background-color: var(--chat-search-bg);
+      margin-bottom: $default-padding-margin/2;
+
+      .search-input-group {
+        width: 100%;
+        position: relative;
+
+        .search-icon {
+          position: absolute;
+          left: 13px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: $muted-color;
+        }
+
+        .search-contact-input {
+          border-radius: 25px !important;
+          padding: 8px 14px 8px 38px !important;
+        }
+      }
+    }
+
+    .contact-list {
+      overflow-y: auto;
+      min-height: $chat-box-height;
+      max-height: $chat-box-height;
+      padding: 0 $default-padding-margin/2 $default-padding-margin/2 $default-padding-margin/2;
+      @include chat-scrollbar-mixin;
+
+      .contact {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: $default-radius;
+
+        .contact-icon {
+          flex-shrink: 0;
+          margin-right: 10px;
+        }
+
+        .contact-info {
+          color: var(--default-font-color);
+        }
+
+        &.active {
+          border-left: 3px solid $brand-color;
+          background-color: rgba($brand-color, 0.05);
+        }
+      }
+    }
+  }
+
+  .chat-messages {
+    flex-grow: 1;
+    border-right: 1px solid var(--default-border-color);
+
+    .message-header {
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 $default-padding-margin;
+      border-bottom: 1px solid var(--default-border-color);
+    }
+
+    .message-body {
+      overflow-y: auto;
+      min-height: calc(#{$chat-box-height} - 48px);
+      max-height: calc(#{$chat-box-height} - 48px);
+      @include chat-scrollbar-mixin;
+
+      .message {
+        padding: 1rem;
+        display: flex;
+        flex-flow: row-reverse;
+        align-items: flex-end;
+        justify-content: flex-start;
+        margin-bottom: 15px;
+
+        .text {
+          color: $white;
+          padding: 1rem;
+          margin-right: 10px;
+          background-color: $brand-color;
+          border-radius: 15px 15px 0 15px;
+        }
+
+        &.reply-message {
+          flex-flow: row;
+          justify-content: flex-start;
+
+          .text {
+            margin-left: 10px;
+            border-radius: 15px 15px 15px 0;
+            color: var(--default-font-color);
+            background-color: var(--base-color);
+          }
+        }
+      }
+    }
+
+    .message-editor {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--default-border-color);
+
+      .message-input {
+        flex-grow: 1;
+        margin: 0 10px;
+
+        .message-input-group {
+          position: relative;
+
+          .form-control {
+            padding-right: 70px !important;
+          }
+
+          .message-input-append {
+            position: absolute;
+            right: 0.35rem;
+            top: 50%;
+            transform: translateY(-50%);
+
+            .btn {
+              color: $muted-color;
+              padding: 0.45rem 0.35rem;
+            }
+
+            .dropdown-emoji {
+              @include emoji-dropdown-mixin;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .chat-contact-details {
+    flex-shrink: 0;
+    padding: $default-padding-margin/2;
+
+    .call-actions {
+      display: flex;
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: $brand-color;
+        background-color: rgba($brand-color, 0.05);
+
+        &:hover {
+          background-color: rgba($brand-color, 0.1);
+        }
+      }
+    }
+
+    .chat-conversation-action {
+      .search-conversation {
+        position: relative;
+
+        .search-icon {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          color: $muted-color;
+        }
+
+        .form-control {
+          border-top: 0 !important;
+          border-left: 0 !important;
+          border-right: 0 !important;
+          border-radius: 0 !important;
+          padding: 8px 38px 8px 0 !important;
+          background-color: transparent !important;
+        }
+      }
+
+      .dropdown-emoji {
+        width: 100%;
+
+        .btn {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: $muted-color;
+          padding: 8px 0;
+          border-bottom: 1px solid var(--default-border-color);
+        }
+
+        @include emoji-dropdown-mixin;
+      }
+    }
+  }
+}

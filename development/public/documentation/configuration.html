@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+    <title>Documentation - ReadyKit</title>
+
+    <link rel="shortcut icon" href="images/icon.png"/>
+    <link rel="apple-touch-icon" href="images/icon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="images/icon.png"/>
+
+    <!-- Bootstrap4.6.0 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Documentation CSS -->
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/doc.css">
+    <link rel="stylesheet" href="css/documentation.css">
+</head>
+
+<body>
+<div class="d-none" id="top"></div>
+
+<div class="wrapper">
+    <div class="sidebar-wrapper">
+        <div id="menu-toggle" class="toggle-sidebar">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="logo-wrapper">
+            <img src="images/logo.png" class="img-fluid" width="200" alt="">
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                <!--Introduction-->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Introduction</a>
+                </li>
+
+                <!--Installation-->
+                <li class="nav-item active">
+                    <a href="configuration.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Configuration
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">
+                            <a href="#serverRequirements" class="sub-menu-link js-page-scrolling">
+                                Server requirements
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#developmentRequirements" class="sub-menu-link js-page-scrolling">
+                                Develop requirements
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#localConfigure" class="sub-menu-link js-page-scrolling">
+                                Local configure
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#serverConfigure" class="sub-menu-link js-page-scrolling">
+                                Server Configure
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Instruction Guide-->
+                <li class="nav-item">
+                    <a href="instruction-guide.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Instruction Guide
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                </li>
+
+                <!--Development Guide-->
+                <li class="nav-item">
+                    <a href="developer-guide.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Development Guide
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                </li>
+
+                <!--Change Log-->
+                <li class="nav-item">
+                    <a href="change-log.html" class="nav-link">
+                        Change Log
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-content-wrapper">
+        <section class="scrollspy-section" id="usageOfAppLevel">
+            <div class="scrollspy-section mb-5" id="serverRequirements">
+                <h5>Server requirements</h5>
+                <ul>
+                    <li>PHP: 8.0.2</li>
+                    <li>OpenSSL PHP Extension</li>
+                    <li>PDO PHP Extension</li>
+                    <li>Mbstring PHP Extension</li>
+                    <li>Tokenizer PHP Extension</li>
+                    <li>XML PHP Extension</li>
+                    <li>Ctype PHP Extension</li>
+                    <li>JSON PHP Extension</li>
+                    <li>ZIP PHP Extension</li>
+                    <li>BCMath PHP Extension</li>
+                </ul>
+            </div>
+            <div class="scrollspy-section mb-5" id="developmentRequirements">
+                <h5>Development Requirements</h5>
+                <ul>
+                    <li>Node.js 14+</li>
+                    <li>npm 6+</li>
+                </ul>
+            </div>
+            <div class="scrollspy-section mb-5" id="localConfigure">
+                <h5>How to Configure Locally</h5>
+
+                <ol>
+                    <li>
+                        You will get two folders.
+                        <ul>
+                            <li>
+                                development
+                            </li>
+                            <li>
+                                documentation
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Go to the development folder, you will find all the development files.
+                    </li>
+                    <li>
+                        Copy all the content from .env.example and then paste it on .env file.
+                    </li>
+                    <li>
+                        Open terminal on the development root folder and write <code>composer install</code> and press
+                        enter.
+                    </li>
+                    <li>
+                        After completing the composer installation write <code>php artisan key:generate</code>
+                        and press enter. It will generate <strong>APP_KEY</strong>
+                    </li>
+                    <li>
+                        Configure your database to provide database credentials.
+                        <img src="images/configure/database.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        Run <code>php artisan migrate</code>
+                    </li>
+                    <li>
+                        Run <code>php artisan db:seed</code>
+                    </li>
+                    <li>
+                        Run <code>php artisan optimize:clear</code>
+                    </li>
+                    <li>
+                        Or you can run <code>php artisan migrate:fresh --seed</code> which will run the previous both
+                        commands.
+                    </li>
+                    <li>
+                        After completing the database migration you should run <code>yarn install</code> or
+                        <code>npm install</code> and press enter.
+                    </li>
+                    <li>
+                        Then run <code>yarn watch</code> or <code>npm run watch</code> .
+                    </li>
+                    <li>
+                        Serving Laravel: If you want to use PHP's buit-in development server, you may use the <code>php
+                        artisan serve</code> . By default the HTTP-server will listen to port 8000. You can also
+                        change the port by adding <br><code> --port </code> argument like <code>php artisan serve
+                        --port=8080</code> .
+                    </li>
+                </ol>
+            </div>
+            <div class="scrollspy-section mb-5" id="serverConfigure">
+                <h5>How to Configure on Server</h5>
+                <p>You can see that we are not giving you the vendor &#38; node_modules folder. When you install
+                    laravel via composer you will find the vendor folder. That's why we are giving you this
+                    <code>composer install</code> command. Using this command you will get all the laravel
+                    dependencies. Another command is <code>npm install</code> or <code>yarn install</code> which will
+                    give you node_modules. These are the package dependencies manager.
+                <p>When you want to upload readykit development folder you need to follow all the "How to
+                    configure locally" steps. Then make a zip file and upload it on your server. Please folow the the
+                    instructions which is given bellow
+                </p>
+                <ol>
+                    <li>
+                        Upload your zip on server and extract it. Like these
+                        <img src="images/configure/zipUpload.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        Create a database on server.
+                    </li>
+                    <li>
+                        Make a database user.
+                    </li>
+                    <li>
+                        Add user to database with all privileges.
+                    </li>
+                    <li>
+                        Configure your database to provide database credentials on <code>.env</code> file.
+                        <img src="images/configure/database.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        Now you need to restructure something. Go to your <code>development/public</code> folder and
+                        select all without <code>mix-manifest.json</code>. Make sure that you are showing all hidden
+                        files.
+                        <img src="images/configure/selectPublicFiles.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        Move all the selected files and folders to your root where your zip extract like <code>
+                        development</code>
+                        <img src="images/configure/movePublicFiles.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        Now you need to edit your <code>index.php</code> file. When you open it you will see
+                        something like these.
+                        <img src="images/configure/indexFile.png" class="img-thumbnail mb-3" alt="">
+                        <br>
+                        We just redirect our require path. Here our require path is <code>development</code>. So we
+                        just change <code>/../</code> to <code>/development/</code> and save. Image given below.
+                        <img src="images/configure/changeIndex.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        Now open your browser new tab and browse your url. Then you will find a migration error
+                        because your database are not migrate yet. In your url bar write <code>/install-demo-data</code>
+                        it will migrate and seed all the data. And also clear all the cache, config,
+                        view etc. Image given bellow.
+                        <img src="images/configure/urlBar.png" class="img-thumbnail mb-3" alt="">
+                        <br>
+                        It will return <code>1</code>. After that delete <code>/install-demo-data</code>
+                        from your url bar and press enter.
+                    </li>
+                    <li>
+                        Final step we need to make <code>symlink</code> with storage folder. Just write <code>/symlink
+                    </code> in url bar.
+                        <br/>
+                        <img src="images/configure/symlink.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </div>
+</div>
+
+<a class="js-page-scrolling back-to-top" href="#top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-up"
+         viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+    </svg>
+</a>
+
+<!-- JavaScript -->
+<script src="js/jquery-slim.js" type="text/javascript"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/bootstrap-bundle.js"  type="text/javascript"></script>
+<script src="js/documentation.js" type="text/javascript"></script>
+</body>
+</html>
+

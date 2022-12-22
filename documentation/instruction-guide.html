@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+    <title>Documentation - ReadyKit</title>
+
+    <link rel="shortcut icon" href="images/icon.png"/>
+    <link rel="apple-touch-icon" href="images/icon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="images/icon.png"/>
+
+    <!-- Bootstrap4.6.0 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Documentation CSS -->
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/doc.css">
+    <link rel="stylesheet" href="css/documentation.css">
+</head>
+
+<body>
+<div class="d-none" id="top"></div>
+
+<div class="wrapper">
+    <div class="sidebar-wrapper">
+        <div id="menu-toggle" class="toggle-sidebar">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="logo-wrapper">
+            <img src="images/logo.png" class="img-fluid" width="200" alt="">
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                <!--Introduction-->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Introduction</a>
+                </li>
+
+                <!--Installation-->
+                <li class="nav-item">
+                    <a href="configuration.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Configuration
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                </li>
+
+                <!--Instruction Guide-->
+                <li class="nav-item active">
+                    <a href="instruction-guide.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Instruction Guide
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">
+                            <a href="#layout-overview" class="sub-menu-link js-page-scrolling">
+                                Layout overview
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#components" class="sub-menu-link js-page-scrolling">Components</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#avatars" class="sub-menu-link js-page-scrolling">Avatars</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#badges-notes" class="sub-menu-link js-page-scrolling">Badge & Notes</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#buttons" class="sub-menu-link js-page-scrolling">Buttons</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#breadcrumb" class="sub-menu-link js-page-scrolling">Breadcrumb</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#icons" class="sub-menu-link js-page-scrolling">Icons</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#media-object" class="sub-menu-link js-page-scrolling">Media Object</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#modals" class="sub-menu-link js-page-scrolling">Modals</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#confirmation-modal" class="sub-menu-link js-page-scrolling">Confirmation
+                                        Modal</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#form-inputs" class="sub-menu-link js-page-scrolling">Form Inputs</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#charts" class="sub-menu-link js-page-scrolling">Charts</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#datatable" class="sub-menu-link js-page-scrolling">Datatable</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#custom-datatable" class="sub-menu-link js-page-scrolling">Custom
+                                        Datatable</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#tabs" class="sub-menu-link js-page-scrolling">Tabs</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#form-wizard" class="sub-menu-link js-page-scrolling">Form wizard</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#advanced" class="sub-menu-link js-page-scrolling">Advanced</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#grid-view-table" class="sub-menu-link js-page-scrolling">Gridview
+                                        Datatable</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#kanban-view" class="sub-menu-link js-page-scrolling">Kanban View</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#calendar-view" class="sub-menu-link js-page-scrolling">Calender View</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#report-table" class="sub-menu-link js-page-scrolling">Report Datatable</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#chat" class="sub-menu-link js-page-scrolling">Chat</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#payment-method" class="sub-menu-link js-page-scrolling">Payment Method</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#user-roles" class="sub-menu-link js-page-scrolling">User & Roles</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#users" class="sub-menu-link js-page-scrolling">Users</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#roles" class="sub-menu-link js-page-scrolling">Roles</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#settings" class="sub-menu-link js-page-scrolling">Settings</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="#general-setting" class="sub-menu-link js-page-scrolling">General
+                                        Setting</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#email-setting" class="sub-menu-link js-page-scrolling">Email Setting</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#sms-setting" class="sub-menu-link js-page-scrolling">SMS Setting</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#recaptcha-setting" class="sub-menu-link js-page-scrolling">ReCAPTCHA
+                                        Setting</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#broadcasting-setting" class="sub-menu-link js-page-scrolling">Broadcasting
+                                        Setting</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="#notification-setting" class="sub-menu-link js-page-scrolling">Notification
+                                        Setting</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!--Development Guide-->
+                <li class="nav-item">
+                    <a href="developer-guide.html" class="nav-link d-flex align-items-center justify-content-between">
+                        Development Guide
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-chevron-down"
+                             viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                </li>
+
+                <!--Change Log-->
+                <li class="nav-item">
+                    <a href="change-log.html" class="nav-link">
+                        Change Log
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-content-wrapper">
+        <section class="scrollspy-section">
+
+            <!--Layout Overview-->
+            <div class="mb-3" id="layout-overview">
+                <h3>Layout overview</h3>
+                <p>
+                    The dashboard is mostly designed by Bootstrap. You can find the documentation here <a
+                        href="https://getbootstrap.com/" target="_blank">getbootstrap.com</a><br>
+                    In our <strong>ReadyKit</strong> app we use <code>app-navbar</code> and <code>sidebar</code>
+                    component
+                    For layout view. Here the developer guideline for working with sidebar and navbar
+                    <code>resources/js/core/components/layouts/readme.md</code>
+                </p>
+            </div>
+
+            <!--Components Overview-->
+            <div class="mb-3" id="components">
+                <h3>Components overview</h3>
+                <p>
+                    To design a complete application almost all of the necessary components are built here. You can use
+                    your custom design components also for your application.
+                    All the components are built with VueJS.
+                </p>
+            </div>
+
+            <!--Avatars-->
+            <div class="mb-3" id="avatars">
+                <h5>Avatars</h5>
+                <p>
+                    To use the component you have to call <code>app-avatar</code>. There many types of image avatar
+                    design available.
+                    See the full documentation of this component in the directory
+                    <code>resources/js/core/components/avatars/readme.md</code>.
+                    You can also find groups of avatars documentation here
+                    <code>resources/js/core/components/avatars-group/readme.md</code>
+                </p>
+            </div>
+
+            <!--Badges-->
+            <div class="mb-3" id="badges-notes">
+                <h5>Badges &amp; Notes</h5>
+                <p>
+                    There are numbers of badges &amp; notes available here.
+                    To use the badge component you have to call <code>app-badge</code> and note component call <code>app-note</code>
+                    See the full documentation of badge and note component in
+                    <code>resources/js/core/components/badge/readme.md</code>
+                </p>
+            </div>
+
+            <!--Buttons-->
+            <div class="mb-3" id="buttons">
+                <h5>Buttons</h5>
+                <p>
+                    To use the button component you have to call <code>app-button</code>.
+                    See the full documentation of button component in <code>resources/js/core/components/buttons/readme.md</code>
+                </p>
+            </div>
+
+            <!--Breadcrumb-->
+            <div class="mb-3" id="breadcrumb">
+                <h5>Breadcrumb</h5>
+                <p>
+                    To use the component you have to call <code>app-breadcrumb</code>.
+                    See the full documentation of this component in the directory
+                    <code>resources/js/core/components/breadcrumb/readme.md</code>
+                </p>
+            </div>
+
+            <!--Icons-->
+            <div class="mb-3" id="icons">
+                <h5>Icons</h5>
+                <p>
+                    We used "Feather Icon" in our application. You can see all their icons here <a
+                        href="https://feathericons.com" target="_blank">feathericons.com</a>.
+                    We built a <code>app-icon</code> component to use icon anywhere. You just have to pass the icon
+                    name.
+                    See details documentation of icon component <code>resources/js/core/components/icon/readme.md</code>
+                </p>
+            </div>
+
+            <!--Media Object-->
+            <div class="mb-3" id="media-object">
+                <h5>Media Object</h5>
+                <p>
+                    To use the component you have to call <code>app-media-object</code>.
+                    Contains image title and subtitle. Full uses documentation here
+                    <code>resources/js/core/components/media-object/readme.md</code>.
+                </p>
+            </div>
+
+            <!--Modals-->
+            <div class="mb-3" id="modals">
+                <h5>Modals</h5>
+                <p>
+                    For anything confirmation like yes or no with modal. You may call
+                    <code>app-confirmation-modal</code>.
+                    See documentation on modal from
+                    <code>resources/js/core/components/confirmation-modal/readme.md</code>
+                </p>
+            </div>
+
+            <!--Confirmation Modals-->
+            <div class="mb-3" id="confirmation-modal">
+                <h5>Confirmation Modals</h5>
+                <p>
+                    We provide different designed modal for webpage. Using <code>app-modal</code> component you can add
+                    modal to any page.
+                    See documentation on modal from <code>resources/js/core/components/modal/readme.md</code>
+                </p>
+            </div>
+
+            <!--Form Input-->
+            <div class="mb-3" id="form-inputs">
+                <h5>Form Input</h5>
+                <p>
+                    By calling <code>app-input</code> you can add different kind of inputs in a web page.
+                    See details documentation of input here <code>resources/js/core/components/input/readme.md</code>
+                </p>
+            </div>
+
+            <!--charts-->
+            <div class="mb-3" id="charts">
+                <h5>Charts</h5>
+                <p>
+                    There we have different type of charts for viewing statistically. we build <code>app-chart</code>
+                    component for this. There have different type of chart available here.
+                    Find the detail documentation on chart from
+                    <code>resources/js/core/components/charts/readme.md</code>
+                </p>
+            </div>
+
+            <!--Datatable-->
+            <div class="mb-3" id="datatable">
+                <h5>Datatable</h5>
+                <p>
+                    Datatable is one of the premium component of our dashboard. With a lot of filters type you can
+                    easily display and manipulate your data in a table.
+                    Find the detail documentation on datatable from <code>resources/js/core/components/datatable/readme.md</code>
+                </p>
+            </div>
+
+            <!--Custom Datatable-->
+            <div class="mb-3" id="custom-datatable">
+
+                <h5>Custom Datatable</h5>
+                <p>
+                    To make the Datatable more dynamic we introduce Custom Datatable feature to this application where
+                    you can add
+                    any datatable for the defined context.
+                </p>
+                <p>
+                    You can add Custom Datatable in the <code>Settings >> Custom Table</code> section.
+                </p>
+                <img src="images/instruction_guide/custom-table-setting.png" class="img-thumbnail mb-3" alt="">
+
+                <ul>
+                    <li>
+                        <h6>Add Custom Datatable</h6>
+                        <p>
+                            You can add any custom datatable by specifying <code>name, context</code> and <code>columns</code>.
+                            Here <code>context</code> is very important. Custom datatable option will be shown in the side menu
+                            according to the context. By default we added only one context named <code>datatable</code> and showed
+                            in the Sidebar's Datatables section.
+                        </p>
+                        <img src="images/instruction_guide/custom-table-add.png" class="img-thumbnail mb-3" alt="">
+
+                    </li>
+                    <li>
+                        <h6>Custom Datatable Context</h6>
+                        <p>
+                            For adding multiple <code>context</code> for showing custom datatable in multiple module you have to add some
+                            code to some specific files.
+                        </p>
+                        <ol>
+                            <li>
+                                <p>
+                                    To add context to custom datatable create form please go to
+                                    <code>resources/js/app/Components/Views/Settings/CustomTable/CustomTableModal.vue</code> file and modify the
+                                    context select option to add more context.
+                                </p>
+                                <img src="images/instruction_guide/custom-table-context-list.png" class="img-thumbnail mb-3" alt="">
+                            </li>
+                            <li>
+                                <p>
+                                    For viewing the Custom table to the Sidebar menu please go to
+                                    <code>app/Http/Composer/SidebarComposer.php</code> file and merge the custom table to the
+                                    submenu option as like as the example. You only have to change the context name to filter out
+                                    the specific custom tables for that menu.
+                                </p>
+                                <img src="images/instruction_guide/custom-table-sidemenu.png" class="img-thumbnail mb-3" alt="">
+                            </li>
+                        </ol>
+
+                    </li>
+                </ul>
+
+
+            </div>
+
+            <!--Tabs-->
+            <div class="mb-3" id="tabs">
+                <h5>Tabs</h5>
+                <p>
+                    We provide both horizontal and vertical tab design for application.
+                    See full <code>app-tab</code> component documentation from <code>resources/js/core/components/tabs/readme.md</code>
+                </p>
+            </div>
+
+            <!--Form wizards-->
+            <div class="mb-3" id="form-wizard">
+                <div>
+                    <h5>Form wizard</h5>
+                    <p>
+                        We provide form wizard design for application. It will help you to give permission to others
+                        tabs.
+                        See full <code>app-form-wizard</code> component documentation from <code>resources/js/core/components/form-wizard/readme.md</code>
+                    </p>
+                </div>
+                <img src="images/instruction_guide/form-wizard.PNG" class="img-thumbnail mb-3" alt="">
+            </div>
+
+            <!--Advanced View-->
+            <h3 id="advanced" class="bd-title mb-3">Advanced view</h3>
+
+            <!--Gridview Datatable-->
+            <div class="mb-3" id="grid-view-table">
+                <h5>Gridview Datatable</h5>
+                <ol>
+                    <li>
+                        First you should use <code>app-table</code> component.
+                    </li>
+                    <li>
+                        Then we should send <code> cardView = true </code> in options of datatable component.
+                    </li>
+                    <li>
+                        And then send <code> componentName = 'YourComponentName' </code> in options which is
+                        your desire card. where you can inject your own design.
+                    </li>
+                    <li>
+                        please check the usages in <code>resources/js/app/components/views/Demo/tables/grid-view</code>
+                    </li>
+                    <li>
+                        List view
+                        <img src="images/instruction_guide/list-view-table.PNG" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        Grid view
+                        <img src="images/instruction_guide/grid-view.PNG" class="img-thumbnail mb-3" alt="">
+                    </li>
+
+                </ol>
+            </div>
+
+            <!--Kanban View-->
+            <div id="kanban-view">
+                <div></div>
+                <h5>Kanban View</h5>
+                <ol>
+                    <li>
+                        In this view you can manage staging and pipelines like task management.
+                    </li>
+                    <li>
+                        Add update delete tasks and can modified kanban view with your choice.
+                    </li>
+                    <li>
+                        please check the usages in <code>resources/js/app/components/views/Demo/Pages/kanban-view</code>
+                    </li>
+                </ol>
+                <img src="images/instruction_guide/kanban-view.PNG" class="img-thumbnail mb-3" alt="">
+            </div>
+
+            <!--Calendar View-->
+            <div id="calendar-view">
+                <h5>Calendar View</h5>
+                <ol>
+                    <li>
+                        In this view you can manage event, schedule, calendar (add, update, delete).
+                    </li>
+                    <li>
+                        please check the usages in
+                        <code>resources/js/app/components/views/Demo/Pages/calendar-view</code>
+                    </li>
+                </ol>
+                <img src="images/instruction_guide/calendar-view.PNG" class="img-thumbnail mb-3" alt="">
+            </div>
+
+            <!--Report Datatable-->
+            <div id="report-table">
+                <h5>Report</h5>
+                <ol>
+                    <li>
+                        There is a demo example by how you can show reports.
+                    </li>
+                    <li>
+                        please check the usages in <code>resources/js/app/components/views/Demo/Pages/Report.vue</code>
+                    </li>
+                </ol>
+                <img src="images/instruction_guide/report-view.PNG" class="img-thumbnail mb-3" alt="">
+            </div>
+
+            <!--Chart View-->
+            <div class="mb-3" id="chat">
+                <h5>Chat</h5>
+                <ol>
+                    <li>
+                        This is the view of Chat. You can chat with the application users. Before that, you have to
+                        configure the
+                        <a href="#broadcastingSetting">pusher</a>.
+                    </li>
+                    <li>
+                        please check the usages in
+                        <code>resources/js/app/components/views/Demo/Pages/chat/Index.vue</code>
+                    </li>
+                </ol>
+                <img src="images/instruction_guide/chat-view.png" class="img-thumbnail mb-3" alt="">
+            </div>
+
+            <!--Payment View-->
+            <div class="mb-3" id="payment-method">
+                <h5>Payment Method</h5>
+                <ol>
+                    <li>
+                        <b>Paypal</b> and <b>Stripe</b> payments method already integrated into this application. You
+                        can make it usable for your application as you want.
+                    </li>
+                    <li>
+                        Go to "Settings" > Payment Methods > Add Payment Method
+                    </li>
+                    <li>
+                        See documentation from here : <a
+                            href="https://developer.paypal.com/docs/api/overview/">Paypal</a> |
+                        <a href="https://stripe.com/docs/api">Stripe</a>
+                    </li>
+                    <li>
+                        please check the usages in <code>resources/js/app/components/views/Demo/Pages/PaymentMethodView.vue</code>
+                    </li>
+                </ol>
+                <img src="images/instruction_guide/payment-method.png" class="img-thumbnail mb-3" alt="">
+                <img src="images/instruction_guide/payment-setting.png" class="img-thumbnail mb-3" alt="">
+            </div>
+
+            <!--User & Roles-->
+            <div class="mb-3" id="user-roles">
+                <h3>User & Roles</h3>
+                <p>
+                    <b>Users</b> and <b>Roles</b> management is an important feature for any application. You may need
+                    different types of
+                    <b>Roles</b>
+                    for <b>Users</b>. For that you have to create roles as you required and gives them permission to
+                    access.
+                </p>
+                <img src="images/instruction_guide/user-and-roles.PNG" class="img-thumbnail mb-3" alt="">
+            </div>
+
+            <!-- Users -->
+            <div class="mb-3" id="users">
+                <h5>Users</h5>
+                <ul>
+                    <li>
+                        Click on <strong>Invite User</strong>, It will open a modal which requires <strong>User
+                        Email</strong> and
+                        <strong>Roles</strong> that will assigned
+                        to that user. Invited user will get an confirmation email with a link. That link will
+                        redirect
+                        to a page where user can set their basic information.
+                        <img src="images/instruction_guide/invite-user.PNG" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        In <strong>Users</strong> table you can search by user's 'first name', 'last name' and
+                        user's 'email'. And also
+                        can filtered by
+                        'Active', 'Inactive', 'Invited'.
+                    </li>
+                    <li>
+                        There are some options in users table action buttons. These options are 'Edit', 'Delete',
+                        'De-activate',
+                        'Active',
+                        'Manage Role'. For invited users 'De-activate', 'Active', options will not be available.
+                        <img src="images/instruction_guide/user_actions.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        Pressing on 'Edit' button a modal will come and here you can change user's first name nad
+                        last name.
+                        <img src="images/instruction_guide/edit_user.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        You can manage roles of any user by clicking on <strong>'Manage Role'</strong> of that
+                        specific
+                        user from "Action" column.
+                        <img src="images/instruction_guide/manage_role.png" class="img-thumbnail mb-3" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <!--Roles-->
+            <div class="mb-3" id="roles">
+                <h5>Roles</h5>
+                <ul>
+                    <li>
+                        Click on <strong>Add Role</strong>, It will open a modal which requires Role name and
+                        permissions for that role
+                        <img src="images/instruction_guide/add-role.PNG" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        You can manage users of any role by clicking on <strong>'Manage Users'</strong> of that
+                        specific
+                        role from "Action" column.
+                        <img src="images/instruction_guide/manage_users.PNG" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        You can manage permissions of any role by clicking on 'Manage' of that specific role from
+                        "Permission" column also.
+                    </li>
+                </ul>
+            </div>
+
+            <!--Settings-->
+            <div class="mb-3" id="settings">
+                <h3>Settings</h3>
+                <p>
+                    We provide some basic settings in our application which will faster your development
+                </p>
+            </div>
+
+            <!--General Setting-->
+            <div class="mb-3" id="general-setting">
+                <h5>General Settings</h5>
+                <p>Go to "Settings" > "General Setting"</p>
+                <ul>
+                    <li>
+                        In this setting you can set your company name.
+                    </li>
+                    <li>
+                        You can upload company logo, icon and banner.
+                    </li>
+                    <li>
+                        Change suitable Language for application.
+                    </li>
+                    <li>
+                        Set Date and Time format and Timezone the way you want to see date/time in your application .
+                    </li>
+                    <li>
+                        Decimal separator, Thousand separator, Number of decimal also can be set.
+                    </li>
+                </ul>
+                <img src="images/instruction_guide/general-setting.PNG" class="img-thumbnail mb-3" alt="">
+            </div>
+
+            <!-- Email Setting -->
+            <div class="mb-3" id="email-setting">
+                <h5>Email Settings</h5>
+                <p>Go to "Settings" > "Email Setting"</p>
+                <p>From this setting you can set your email delivery for your application</p>
+                <p>We provide 6 supported mail services for set email</p>
+                <ol>
+                    <li>
+                        <h6 class="font-weight-bold">Amazon SES</h6>
+                        <p>
+                            Amazon SES needed Api Region, Access Key, Secret Access key, Host name, From name and From
+                            email to set up.
+                        </p>
+                        <img src="images/instruction_guide/email-setting-amazon-ses.PNG" class="img-thumbnail mb-3"
+                             alt="">
+                        <p>Follow <a
+                                href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domain-procedure.html"
+                                target="_blank">this link</a> to know how you can verify the email address</p>
+
+                    </li>
+                    <li>
+                        <h6 class="font-weight-bold">Mailgun</h6>
+                        <p>
+                            To set up Mailgun you will need a Domain name (<a
+                                href="https://help.mailgun.com/hc/en-us/articles/202256730-How-do-I-pick-a-domain-name-for-my-Mailgun-account-"
+                                target="_blank">Here</a> is how you can add domain in mailgun), API key, From name, and
+                            From email.
+                        </p>
+                        <img src="images/instruction_guide/email-setting-mailgun.PNG" class="img-thumbnail mb-3" alt="">
+                    </li>
+                    <li>
+                        <h6 class="font-weight-bold">SMTP</h6>
+                        <img src="images/instruction_guide/email-setting-smtp.PNG" class="img-thumbnail mb-3" alt="">
+                        <p>
+                            To set SMTP mail service provider you need to set smtp host, Port, Password to access from
+                            the email sent and a encryption type,
+                            <code>N.B: Don't forget to enable less secure app permission in the email which you sent
+                                from.</code>
+                        </p>
+                    </li>
+                    <li>
+                        <h6 class="font-weight-bold">Sendmail</h6>
+                        <img src="images/instruction_guide/email-setting-sendmail.PNG" class="img-thumbnail mb-3"
+                             alt="">
+                        <p>
+                            Sendmail needs a host name, port, username and password to access to the mail.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+
+            <!--SMS Setting -->
+            <div class="mb-3" id="sms-setting">
+                <h5>SMS Settings</h5>
+                <p>Go to "Settings" > "SMS Setting"</p>
+                <img src="images/instruction_guide/sms-setting.PNG" class="img-thumbnail mb-3" alt="">
+                <p>This setting will help you to send SMS to your application user</p>
+                <p>We use Nexmo for sending SMS. See Nexmo documentation from <a
+                        href="https://developer.nexmo.com/messaging/sms/overview" target="_blank">here</a></p>
+            </div>
+
+            <!-- ReCAPTCHA Setting -->
+            <div class="mb-3" id="recaptcha-setting">
+                <h5>ReCAPTCHA Settings</h5>
+                <p>Go to "Settings" > "ReCAPTCHA Setting"</p>
+                <img src="images/instruction_guide/recaptcha-setting.PNG" class="img-thumbnail mb-3" alt="">
+                <p>To enable reCaptcha in authentication you have to enter your site key and secret key from google</p>
+                <p>See documentation from here <a href="https://www.google.com/recaptcha/admin/create" target="_blank">here</a>
+                </p>
+            </div>
+
+            <!-- Broadcasting Setting -->
+            <div class="mb-3" id="broadcasting-setting">
+                <h5>Broadcasting Setup</h5>
+                <p>Go to <code>.env</code> file > Configure your Pushser with proper credentials.</p>
+                <ol>
+                    <li>In the <code>.env</code> file, Change the "BROADCAST_DRIVER=pusher".
+                        <img class="img-thumbnail mb-3" src="images/instruction_guide/env_1.jpg">
+                    </li>
+
+                    <li>Configure your pusher to provide credentials.
+                        <img class="img-thumbnail mb-3" src="images/instruction_guide/env_2.jpg"></li>
+                </ol>
+
+                <p><b>How to get pusher broadcasting setup credential</b></p>
+                <ol>
+                    <li>Sign in <a href="https://pusher.com/">pusher.com</a></li>
+                    <li>Create a app from <a
+                            href="https://dashboard.pusher.com/channels">dashboard.pusher.com/channels</a></li>
+                    <li>Login "Pusher" > Can view "Channels" > Select your application name > Click on "App keys" from
+                        the left side menu > Now you can generate "Pusher" credentials.
+                    </li>
+                </ol>
+                <img src="images/instruction_guide/pusher.jpg" class="img-thumbnail mb-3" alt="">
+            </div>
+
+            <!-- Notification Setting -->
+            <div class="mb-3" id="notification-setting">
+                <h5>Notification Settings</h5>
+                <p>Go to "Settings" > "Notification Setting"</p>
+                <p>
+                    You can update settings from here and Also can update the template of notification. You have the
+                    following option in notification setting:
+                </p>
+                <ul>
+                    <li>You can set channels where the notification will send.</li>
+                    <li>You can set choose users who will be notified on selected event.</li>
+                    <li>You can set choose roles to set these audiences under that roles to get notified.</li>
+                    <li>You can set up the template for the notification.</li>
+                </ul>
+                <img src="images/instruction_guide/notification-channel-setting.PNG" class="img-thumbnail mb-3" alt="">
+            </div>
+
+        </section>
+    </div>
+</div>
+
+<a class="js-page-scrolling back-to-top" href="#top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-up"
+         viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+    </svg>
+</a>
+
+<!-- JavaScript -->
+<script src="js/jquery-slim.js" type="text/javascript"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/bootstrap-bundle.js" type="text/javascript"></script>
+<script src="js/documentation.js" type="text/javascript"></script>
+</body>
+</html>
